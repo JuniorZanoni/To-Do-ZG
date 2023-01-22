@@ -8,18 +8,19 @@ To-Do ZG é uma aplicação desenvolvida em Java com objetivo de gerenciar uma l
 
 Indique quais são as funcionalidades e comportamentos do App
 
-- `Adicionar tarefas`: Criar tarefa com nome, descrição, prioridade, status e categoria.
+- `Adicionar tarefas`: Cria tarefas com nome, descrição, prioridade, status e categoria.
     - `Prioridade`: A prioridade vai de 1 a 5, onde 5 significa mais importante.
     - `Status`: Pode-se escolher 3 status, que são "A fazer", "Fazendo" ou "Feito"
     - `Categoria`: Toda tarefa precisa de uma categoria, que é disponibilizada em lista, para selecionar.
 - `Editar ou apagar tarefas`: Pode-se editar ou apagar qualquer campo das tarefas.
 - `Listar e filtrar tarefas`: Pode-se listar todas tarefas e também filtrar por, categoria, prioridade, status ou data (data de criação ou conclusão).
 - `Adicionar categoria`: Cria categorias para agrupar as tarefas.
+- `Criar alarme`: Pode-se criar um ou mais alarmes para cada tarefa, definindo a data, hora e também com quantos minutos de antecedência quer ser notificado.
 - `Painel de tarefas`: Painel que exibe quantas tarefas cada um dos status tem.
 - `Persistência de arquivos`: Todas tarefas e categorias são salvas localmente em formado CSV.
 
 
-![](https://imageup.me/images/9969c7f9-e5f3-4c0c-94bc-9bb729272da0.png)
+![](https://uploaddeimagens.com.br/images/004/308/425/original/Screenshot_from_2023-01-22_14-58-36.png?1674410340)
 
 
 ## Tecnologias utilizadas

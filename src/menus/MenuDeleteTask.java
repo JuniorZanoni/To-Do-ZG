@@ -42,11 +42,9 @@ public class MenuDeleteTask {
         } else {
             deleteTask();
         }
-
-
     }
 
-    private boolean verifyTasks() throws FileNotFoundException, ParseException {
+    private boolean verifyTasks() {
         ArrayList<Task> tasks = Task.getListTask();
         if (tasks.size() == 0) {
             ClearConsole.clear();

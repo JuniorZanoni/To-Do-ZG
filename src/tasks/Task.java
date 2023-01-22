@@ -12,12 +12,8 @@ public class Task implements Comparable<Task> {
     private static int id;
 
     static {
-        try {
-            listTask = Data.loadTasks();
-            id = listTask.size();
-        } catch (FileNotFoundException e) {
-            listTask = new ArrayList<>();
-        }
+        listTask = Data.loadTasks();
+        id = listTask.size();
     }
 
     private String name;

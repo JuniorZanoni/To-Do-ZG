@@ -1,11 +1,14 @@
 package data;
 
+import tasks.Alarm;
 import tasks.Category;
 import tasks.Task;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -13,11 +16,17 @@ import java.util.Scanner;
 
 public class Data {
 
-    public static ArrayList<Task> loadTasks() throws FileNotFoundException {
+    public static ArrayList<Task> loadTasks() {
 
         ArrayList<Task> tasks = new ArrayList<>();
 
-        Scanner scanner = new Scanner(new File("tasks.csv"));
+        Scanner scanner = null;
+
+        try {
+            scanner = new Scanner(new File("tasks.csv"));
+        } catch (FileNotFoundException e) {
+            return tasks;
+        }
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
@@ -107,4 +116,62 @@ public class Data {
         ps.close();
     }
 
+    public static ArrayList<Alarm> loadAlarms() {
+
+        ArrayList<Alarm> listAlarms = new ArrayList<>();
+
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(new File("alarms.csv"));
+        } catch (FileNotFoundException e) {
+            return listAlarms;
+        }
+
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] valores = line.split(",");
+
+            String[] localDate = valores[1].split("-");
+            int year = Integer.parseInt(localDate[0]);
+            int month = Integer.parseInt(localDate[1]);
+            int day = Integer.parseInt(localDate[2]);
+
+            String[] localTime = valores[2].split(":");
+            int hour = Integer.parseInt(localTime[0]);
+            int minute = Integer.parseInt(localTime[1]);
+
+            int idTask = Integer.parseInt(valores[0]);
+            LocalDate alarmDate = LocalDate.of(year, month, day);
+            LocalTime alarmTime = LocalTime.of(hour, minute);
+            int minutesBefore = Integer.parseInt(valores[3]);
+
+            Alarm alarm = new Alarm(idTask, alarmDate, alarmTime, minutesBefore);
+
+            listAlarms.add(alarm);
+        }
+
+        scanner.close();
+
+        return listAlarms;
+    }
+
+    public static void saveAlarms() throws FileNotFoundException {
+        PrintStream ps = new PrintStream("alarms.csv");
+
+        ArrayList<Alarm> listAlarms = Alarm.listAlarms;
+
+        listAlarms.forEach(alarm -> {
+            ps.print(alarm.getIdTask());
+            ps.print(",");
+            ps.print(alarm.getAlarmDate().toString());
+            ps.print(",");
+            ps.print(alarm.getAlarmTime().toString());
+            ps.print(",");
+            ps.print(alarm.getMinutesBefore());
+            ps.println();
+        });
+
+        ps.close();
+
+    }
 }
