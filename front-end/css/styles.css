@@ -1,0 +1,31 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #d7d7d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+#box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#form-create-task {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-multiTask {
+  margin-top: 20px;
+}
+
