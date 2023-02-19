@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ListCategoriesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-02-19T01:28:56" hostname="zanoni" time="0.015">
+  <properties/>
+  <testcase name="DeveRetornarCorretamenteACategoriaCorrespondenteAoIndex()" classname="ListCategoriesTest" time="0.005"/>
+  <testcase name="DeveLevantarUmaExceptionPorQueACategoriaNaoExiste()" classname="ListCategoriesTest" time="0.005"/>
+  <testcase name="DeveRetornarCorretamenteAListaDeCategorias()" classname="ListCategoriesTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

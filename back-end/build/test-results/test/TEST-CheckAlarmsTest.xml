@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CheckAlarmsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-02-19T01:28:56" hostname="zanoni" time="0.165">
+  <properties/>
+  <testcase name="DeveConverterCorretamenteLocalTimeEmMinutesInteger()" classname="CheckAlarmsTest" time="0.135"/>
+  <testcase name="DeveRetornarCorretamenteUmaListaDeAlarmesComAsDatasDeDespertar()" classname="CheckAlarmsTest" time="0.024"/>
+  <testcase name="DeveRetornarCorretamenteUmaListaDeAlarmesComAsDatasEHorarioDeDespertar()" classname="CheckAlarmsTest" time="0.004"/>
+  <testcase name="DeveRetornarCorretamenteUmaListaDeAlarmesComOTempoDeDespertar()" classname="CheckAlarmsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ConvertStringInLocalTimeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-19T01:28:56" hostname="zanoni" time="0.003">
+  <properties/>
+  <testcase name="DeveConverterUmaStringEmLocalTime()" classname="ConvertStringInLocalTimeTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
